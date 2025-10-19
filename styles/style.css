@@ -43,8 +43,11 @@
   font-size: 18px;
   line-height: 24.3px;
   letter-spacing: 0.18px;
-  list-style-type: none;
   font-style: normal;  
+}
+
+.address ul {
+  list-style-type: none;
 }
 
 .cover {
@@ -84,7 +87,6 @@
 
 .text_cover {
   display: block;
-  letter-spacing: 30px; 
 }
 
 .text_center {
@@ -95,12 +97,8 @@
   text-align: right;
 }
 
-.letter_spacing {
-  letter-spacing: 60px;
-}
-
-.no_letter_spacing {
-  letter-spacing: 0; 
+.spaced {
+  margin-right: 30px; 
 }
 
 .cover_description {
@@ -216,20 +214,25 @@
 }
 
 .about {
-  padding-top: 146px;
-  padding-bottom: 180px;
+  margin-top: 309px;
+
+  padding-bottom: 180px; 
 }
 
 .about_container {
   display: grid;
   grid-template-columns: 334px 1fr;
-  gap: 25px;
+
+  grid-template-rows: 240px auto; 
+  column-gap: 25px;
   padding: 0 24px;
-  align-items: center;
 }
 
 .about_logo {
+  grid-row: 1;     
+  grid-column: 1;   
   justify-self: center;
+  align-self: center;
   background-color: #000;
   border-radius: 50%;
   width: 240px;
@@ -244,13 +247,10 @@
   height: 114px;
 }
 
-.about_content {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
 .title_about {
+  grid-row: 1;     
+  grid-column: 2;  
+  align-self: center; 
   color: black;
   font-size: 40px;
   font-weight: 700;
@@ -258,14 +258,16 @@
 }
 
 .about_text {
+  grid-row: 2;    
+  grid-column: 2;   
   display: flex;
   flex-direction: column;
   gap: 25px; 
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
+  margin-top: 5px;
 }
-
 
 .footer {
   display: grid;
@@ -307,4 +309,9 @@
 .images_footer {
   width: 48px;
   height: 48px;
+}
+
+.card_about_book {
+  justify-content: flex-start; 
+  gap: 30px;                  
 }
